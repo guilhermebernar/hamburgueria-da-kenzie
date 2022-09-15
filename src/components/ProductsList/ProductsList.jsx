@@ -32,9 +32,10 @@ const ProductList = ({products, setProducts, currentSale, setCurrentSale, filter
               <img src={loadGif} alt="loading"/>
             </LoadingGif>
           : filteredProducts.length===0?
-            (<>
+            (
+              <>
               {products.map(({ id, name, img, category, price }) => {
-                return <Product 
+                return <Product  
                 key={id}
                 id={id} 
                 name={name} 
@@ -45,7 +46,8 @@ const ProductList = ({products, setProducts, currentSale, setCurrentSale, filter
                 setCurrentSale={setCurrentSale}
                 />
                 })}
-            </>):(
+              </>
+            ):(
               <>
               {filteredProducts.map(({ id, name, img, category, price }) => {
                 return <Product 
@@ -59,7 +61,7 @@ const ProductList = ({products, setProducts, currentSale, setCurrentSale, filter
                 setCurrentSale={setCurrentSale}
                 />
                 })}
-            </>
+              </>
             )
           }  
         </ProdList>

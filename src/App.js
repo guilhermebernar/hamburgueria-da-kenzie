@@ -24,7 +24,7 @@ function App() {
             products={products} 
             setProducts={setProducts} 
             filteredProducts={filteredProducts} 
-            currentSale={currentSale} 
+            currentSale={currentSale}
             setCurrentSale={setCurrentSale} 
           />
           <Cart 
